@@ -80,3 +80,6 @@ button.btn{border:0;cursor:pointer}
 .hint{font-size:15px;color:var(--soft);margin:8px 0 0}
 #support .two{align-items:start}
 #support dl{margin-top:34px}
+.lang button{border-color:var(--edge);background:var(--deep);padding:6px 12px}
+.lang button[aria-pressed=true]{background:var(--gold);border-color:var(--gold);color:var(--brown)}
+@media(max-width:420px){.lang button{font-size:13px;padding:6px 8px}.brand{font-size:13px;gap:8px}.top{padding-inline:14px}}

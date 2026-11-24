@@ -8,6 +8,9 @@ const calm = matchMedia("(prefers-reduced-motion: reduce)").matches;
 /* Sprache */
 function setLang(l) {
   document.documentElement.lang = l;
+  $("[data-en]").forEach(e => e.textContent = e.dataset[l]);
+  $("[data-alt-en]").forEach(e => e.alt = e.getAttribute("data-alt-" + l));
+  $("[data-aria-en]").forEach(e => e.setAttribute("aria-label", e.getAttribute("data-aria-" + l)));
   $("[data-setlang]").forEach(b => b.setAttribute("aria-pressed", b.dataset.setlang === l));
 }
 let lang = navigator.language?.startsWith("de") ? "de" : "en";
